@@ -53,13 +53,13 @@ function showComputerChoice(computerChoice) {
 
     // Set the image and text based on computer's choice
     if (computerChoice === 'rock') {
-        computerChoiceImage.src = `../assets/images/rock.png`;
+        computerChoiceImage.src = `./assets/images/rock.png`;
         computerChoiceText.textContent = `Computer chose Rock`;
     } else if (computerChoice === 'paper') {
-        computerChoiceImage.src = `../assets/images/paper.png`;
+        computerChoiceImage.src = `./assets/images/paper.png`;
         computerChoiceText.textContent = `Computer chose Paper`;
     } else if (computerChoice === 'scissors') {
-        computerChoiceImage.src = `../assets/images/sciccors.png`;
+        computerChoiceImage.src = `./assets/images/sciccors.png`;
         computerChoiceText.textContent = `Computer chose Scissors`;
     }
 
