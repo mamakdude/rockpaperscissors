@@ -1,0 +1,171 @@
+
+body {
+    background-color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px; /* Adjust as needed */
+    background-color: #ff6ec7;
+}
+.scoreboard > div > span.score-text{
+    position: relative;
+    left: 150px;
+    top: 130px;
+    margin: 0px;
+    padding: 0px;
+    font-size:  50pt;
+}
+.player-score,
+.computer-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 200px;
+}
+.score-text {
+    font-size: 18px;
+    display: inline-block; /* Add this */
+    margin-right: 10px; /* Adjust as needed */
+}
+.score-image {
+    margin: 0px;
+    padding: 0px;
+    width: 200px; /* Adjust image size */
+}
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Adjust as needed */
+    position: relative;
+    top: 200px;
+}
+option {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #00ffcc;
+    transition: background-color 0.3s ease;
+}
+
+.option:hover {
+    background-color: #ff00ff;
+    cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+    .scoreboard {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .scoreboard > div {
+        margin: 10px 0;
+    }
+
+    .scoreboard > div > span.score-text {
+        margin: 0;
+        position: relative;
+        top: 55px;
+        font-size: 24px;
+    }
+
+    .score-image {
+        width: 80px;
+    }
+
+    .choices {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 600px;
+    }
+
+    .option {
+        margin: 10px;
+        padding: 8px 16px;
+    }
+
+    .option img {
+        height: 60px;
+        width: auto; /* Allow images to adjust proportionally */
+        margin: 10px;
+    }
+
+    .option p {
+        font-size: 16px;
+    }
+
+    /* Adjust position of the scoreboard */
+    .player-score, .computer-score {
+        text-align: center;
+    }
+    .option:hover {
+        position: relative;
+        top: 30px;
+    }
+}
+
+.option img{
+    height: 200px;
+    margin: 40px;
+    
+}
+.option p{
+    height: 200px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 40px;
+    color: #fff; 
+}
+@keyframes flash {
+    0% { background-color: #ff6ec7; }
+    50% { background-color: green; }
+    100% { background-color: #ff6ec7; }
+}
+.flash {
+    animation: flash 0.5s ease;
+}
+.red-flash {
+    animation: red-flash 0.5s ease;
+}
+@keyframes red-flash {
+    0% { background-color: #ff6ec7; }
+    50% { background-color: #ff0000; }
+    100% { background-color: #ff6ec7; }
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.overlay-content img {
+    width: 400px; /* Adjust image size */
+}
+
+.overlay-content p {
+    font-size: 50px;
+}
